@@ -1,10 +1,11 @@
 package br.edu.pucgoias.pji.vacinas.repository;
 
-import br.edu.pucgoias.pji.vacinas.db.DatabaseConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import br.edu.pucgoias.pji.vacinas.db.DatabaseConnection;
 
 public class RelatorioRepository {
 
@@ -76,7 +77,7 @@ public class RelatorioRepository {
             JOIN
                 Vacina AS v ON av.ID_Vacina = v.ID_Vacina
             ORDER BY
-                p.Nome, av.Data_Aplicacao;
+                av.Data_Aplicacao DESC;
         """;
 
         StringBuilder relatorio = new StringBuilder();
