@@ -1,0 +1,59 @@
+erDiagram
+    Paciente {
+        int ID_Paciente PK
+        string Nome
+        date Data_Nascimento
+        string Endereco
+        int ID_Regiao FK
+        int ID_Escolaridade FK
+    }
+
+    Regiao {
+        int ID_Regiao PK
+        string Nome_Regiao
+    }
+
+    Escolaridade {
+        int ID_Escolaridade PK
+        string Nivel
+    }
+
+    Aplicacao_Vacina {
+        int ID_Aplicacao PK
+        int ID_Paciente FK
+        int ID_Vacina FK
+        date Data_Aplicacao
+        int Numero_Dose
+    }
+
+    Vacina {
+        int ID_Vacina PK
+        string Nome_Vacina
+        string Fabricante
+    }
+
+    Diagnostico {
+        int ID_Diagnostico PK
+        int ID_Paciente FK
+        int ID_Doenca FK
+        date Data_Diagnostico
+    }
+
+    Doenca {
+        int ID_Doenca PK
+        string Nome_Doenca
+    }
+
+    Vacina_Previne_Doenca {
+        int ID_Vacina FK
+        int ID_Doenca FK
+    }
+
+    Paciente ||--o{ Aplicacao_Vacina : "recebe"
+    Vacina ||--o{ Aplicacao_Vacina : "contém"
+    Paciente ||--o{ Diagnostico : "tem"
+    Doenca ||--o{ Diagnostico : "é diagnosticada em"
+    Regiao ||--|{ Paciente : "reside em"
+    Escolaridade ||--|{ Paciente : "possui"
+    Vacina ||--|{ Vacina_Previne_Doenca : "previne"
+    Doenca ||--|{ Vacina_Previne_Doenca : "é prevenida por"
