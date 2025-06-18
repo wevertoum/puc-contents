@@ -1,0 +1,44 @@
+@startuml
+
+actor Organizador as "Organizador (Lucas)"
+actor Acampante as "Acampante (Ana)"
+actor Supervisor as "Supervisor (Pastor João)"
+
+rectangle CampGestor {
+    usecase "Fazer Login" as HU1
+    usecase "Cadastrar Evento" as HU2
+    usecase "Cadastrar Acampante" as HU3
+    usecase "Visualizar Detalhes do Evento" as HU4
+    usecase "Inscrever-se com Escolha de Leito" as HU5
+    usecase "Exibir Quartos e Ocupantes" as HU6
+    usecase "Verificar Vagas e Confirmar" as HU7
+    usecase "Enviar E-mail de Confirmação" as HU8
+    usecase "Visualizar e Exportar Lista de Inscritos" as HU9
+    usecase "Supervisionar Evento" as HU10
+    usecase "Enviar Lembretes Automáticos" as HU11
+}
+
+' Associações dos atores com os casos de uso
+Organizador --> HU1
+Organizador --> HU2
+Organizador --> HU9
+Acampante --> HU3
+Acampante --> HU4
+Acampante --> HU5
+Acampante --> HU11
+Supervisor --> HU1
+Supervisor --> HU9
+Supervisor --> HU10
+
+' Relacionamentos entre casos de uso
+HU5 ..> HU6 : <<include>>
+HU5 ..> HU7 : <<include>>
+HU5 ..> HU8 : <<include>>
+HU5 ..|> HU3 : depende de
+HU5 ..|> HU4 : depende de
+HU9 ..|> HU2 : depende de
+HU10 ..|> HU2 : depende de
+HU11 ..|> HU5 : depende de
+HU11 ..|> HU2 : depende de
+
+@enduml
