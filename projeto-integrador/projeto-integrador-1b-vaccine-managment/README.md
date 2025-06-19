@@ -204,7 +204,7 @@ O script pode ser executado via MySQL ou terminal para construir a base de dados
 
 ## 3. Funcionalidades do Sistema (Java)
 
-O sistema foi desenvolvido em Java utilizando a biblioteca Swing para a interface e JDBC para a conexão com o banco. A seguir, apresenta-se uma descrição das telas principais:
+O sistema foi desenvolvido em Java utilizando a JOptionPane para a interface e JDBC para a conexão com o banco. A seguir, apresenta-se uma descrição das telas principais:
 
 ![Menu Inicial](screenshots/menu_inicial.png)
   Tela inicial com acesso centralizado para todas as funcionalidades do sistema.
