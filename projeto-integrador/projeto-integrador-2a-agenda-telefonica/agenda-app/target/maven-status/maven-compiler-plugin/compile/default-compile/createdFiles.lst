@@ -1,0 +1,6 @@
+br/edu/pucgoias/pji/agenda/view/MenuView$1.class
+br/edu/pucgoias/pji/agenda/db/DatabaseConnection.class
+br/edu/pucgoias/pji/agenda/model/Contato.class
+br/edu/pucgoias/pji/agenda/view/MenuView.class
+br/edu/pucgoias/pji/agenda/repository/ContatoRepository.class
+br/edu/pucgoias/pji/agenda/Main.class
