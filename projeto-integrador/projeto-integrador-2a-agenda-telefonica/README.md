@@ -5,7 +5,7 @@ Bem-vindo(a)! Este é um guia de onboarding para você entender rapidamente como
 
 ---
 
-## 🗄️ 1. Ponto de Partida: O Banco de Dados
+## 1. Ponto de Partida: O Banco de Dados
 
 Tudo começa com o banco de dados.
 
