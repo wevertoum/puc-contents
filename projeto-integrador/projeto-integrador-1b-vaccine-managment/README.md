@@ -196,7 +196,7 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 ```
 
-O script pode ser executado via MySQL Workbench ou terminal para construir a base de dados.
+O script pode ser executado via MySQL ou terminal para construir a base de dados.
 
 ---
 
